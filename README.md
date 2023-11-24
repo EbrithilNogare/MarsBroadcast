@@ -6,8 +6,8 @@ Game jam 2023 MFF
 
 [![](https://img.shields.io/github/package-json/v/EbrithilNogare/MarsBroadcast/gh-pages?label=version&style=for-the-badge&cacheSeconds=300)](https://github.com/EbrithilNogare/MarsBroadcast/tree/gh-pages/Build)
 
-[![](https://img.shields.io/github/size/EbrithilNogare/MarsBroadcast/Build/WebGL.wasm?branch=gh-pages&style=for-the-badge&label=Size%20of%20scripts&cacheSeconds=300)](https://github.com/EbrithilNogare/LucidityDungeon/tree/gh-pages/Build)
-[![](https://img.shields.io/github/size/EbrithilNogare/MarsBroadcast/Build/WebGL.data?branch=gh-pages&style=for-the-badge&label=Size%20of%20data&cacheSeconds=300)](https://github.com/EbrithilNogare/LucidityDungeon/tree/gh-pages/Build)
+[![](https://img.shields.io/github/size/EbrithilNogare/MarsBroadcast/Build/WebGL.wasm?branch=gh-pages&style=for-the-badge&label=Size%20of%20scripts&cacheSeconds=300)](https://github.com/EbrithilNogare/MarsBroadcast/tree/gh-pages/Build)
+[![](https://img.shields.io/github/size/EbrithilNogare/MarsBroadcast/Build/WebGL.data?branch=gh-pages&style=for-the-badge&label=Size%20of%20data&cacheSeconds=300)](https://github.com/EbrithilNogare/MarsBroadcast/tree/gh-pages/Build)
 
 ## Online DEMO
 [Mars Broadcast](https://ebrithilnogare.github.io/MarsBroadcast/)
