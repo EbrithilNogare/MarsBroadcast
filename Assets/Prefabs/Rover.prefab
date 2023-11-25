@@ -62,7 +62,7 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 1
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
@@ -70,8 +70,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 10
-  m_PointLightInnerRadius: 10
-  m_PointLightOuterRadius: 120
+  m_PointLightInnerRadius: 20
+  m_PointLightOuterRadius: 20
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -317,8 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7812d53c85765b478b91309e8837d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTime: 1
-  moveSpeed: 10
-  rotateTime: 1
+  moveTime: 10
+  moveSpeed: 1
+  rotateTime: 5
   angleOfMovement: 135
   moving: 0
+  stats: {fileID: 0}
