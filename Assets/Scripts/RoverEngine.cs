@@ -51,7 +51,9 @@ public class RoverEngine : MonoBehaviour
         }
         else
         {
-            Debug.Log("ROVER SAW US!!");
+            //Debug.Log("ROVER SAW US!!");
+            stats.Error = "ROVER SAW US!!";
+            moveSpeed = 0f;
         }
     }
 
