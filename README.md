@@ -12,5 +12,8 @@ Game jam 2023 MFF
 ## Online DEMO
 [Mars Broadcast](https://ebrithilnogare.github.io/MarsBroadcast/)
 
+<img src="https://github.com/EbrithilNogare/MarsBroadcast/assets/22661032/10c80974-7918-430d-981d-04c5845c284b" alt="drawing" width="400"/>
+
+
 ### Unity version
 2022.3.9f1
