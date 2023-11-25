@@ -1192,6 +1192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 551809712395749033, guid: 6f159bb73ab7ff6479e43bfa31e3202e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2184108128628422331, guid: 6f159bb73ab7ff6479e43bfa31e3202e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1231,6 +1235,14 @@ PrefabInstance:
     - target: {fileID: 2184108128628422331, guid: 6f159bb73ab7ff6479e43bfa31e3202e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376576478412018640, guid: 6f159bb73ab7ff6479e43bfa31e3202e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109761937782211286, guid: 6f159bb73ab7ff6479e43bfa31e3202e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7902118250749415630, guid: 6f159bb73ab7ff6479e43bfa31e3202e, type: 3}
       propertyPath: Rover
