@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class StatsManager : MonoBehaviour
@@ -16,7 +17,8 @@ public class StatsManager : MonoBehaviour
 
     public delegate void ErrorChangeDelegate(string newObject);
     public event ErrorChangeDelegate OnErrorChange;
-
+    [Header("RUNNING")]
+    public bool TimeRunning = true;
     [Header("ERROR")]
     public string _Error = "";
     public string Error
@@ -35,6 +37,8 @@ public class StatsManager : MonoBehaviour
             }
         }
     }
+    public GameObject WinScreen;
+    public GameObject LoserScreen;
 
     [Header("TEMPERATURE")]
     public float _Temperature;
@@ -85,6 +89,7 @@ public class StatsManager : MonoBehaviour
 
     [Header("BATTERY")]
     public float _Battery;
+    public float DecreaseValue;
     public BatteryController BatteryController;
     public float Battery
     {
@@ -116,6 +121,11 @@ public class StatsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (TimeRunning)
+        {
+            Battery -= 0.0001f;
+
+        }
         //Battery -= 0.001f;
     }
 
@@ -141,12 +151,22 @@ public class StatsManager : MonoBehaviour
     {
         BatteryController.SetValueOnSlider(newValue);
         if (Battery <= 0f)
+        {
             Debug.Log("You WON!!");
+            WinScreen.SetActive(true);
+        }
     }
 
     private void HandleErrorChange(string newValue)
     {
         Debug.Log("Error accure due: " + newValue);
+        TimeRunning = false;
+        LoserScreen.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("MainGame");
     }
 
     //private void OnValidate()
