@@ -11,6 +11,8 @@ public class TempController : MonoBehaviour
     private float MinAcceptedValue;
     private float MaxAcceptedValue;
 
+    private float probability = 0.01f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,10 @@ public class TempController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Random.value < probability)
+        {
+            statsManager.Temperature = Mathf.Clamp01(statsManager.Temperature + 0.01f); ;
+        }
     }
 
     public void AddToTemp(float value)
