@@ -3,10 +3,14 @@ using UnityEngine.Tilemaps;
 
 public class SurfaceController : MonoBehaviour
 {
-    public Tilemap groundTilemap;
-    public Tilemap adormentTilemap;
-    public Tile groundTile;
-    public Tile[] adormentTiles;
+    [SerializeField] int tilesBetweenFootStep;
+    [SerializeField] int firstFootStepOffset;
+    [SerializeField] Tilemap groundTilemap;
+    [SerializeField] Tilemap adormentTilemap;
+    [SerializeField] Tilemap footstepsTilemap;
+    [SerializeField] Tile groundTile;
+    [SerializeField] Tile[] adormentTiles;
+    [SerializeField] Tile footStepTile;
 
     private Camera mainCamera;
 
@@ -36,7 +40,12 @@ public class SurfaceController : MonoBehaviour
                 if (groundTilemap.GetTile(cellPosition) == null)
                 {
                     groundTilemap.SetTile(cellPosition, groundTile);
-                    if (Random.value < 0.2f)
+
+                    if (y > firstFootStepOffset - 2 && (y + firstFootStepOffset + (Mathf.Abs(x) % 2)) % tilesBetweenFootStep == 0)
+                    {
+                        footstepsTilemap.SetTile(cellPosition, footStepTile);
+                    }
+                    else if (Random.value < 0.2f)
                     {
                         int randomIndex = Random.Range(0, adormentTiles.Length);
                         adormentTilemap.SetTile(cellPosition, adormentTiles[randomIndex]);
@@ -44,5 +53,21 @@ public class SurfaceController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool IsThisTileFootStep(int x, int y)
+    {
+        Vector3Int cellPosition = new Vector3Int(x, y, 0);
+        TileBase tile = footstepsTilemap.GetTile(cellPosition);
+        return (tile == footStepTile);
+    }
+
+    public void CleanTile(int x, int y)
+    {
+        if (!IsThisTileFootStep(x, y)) return;
+
+        Vector3Int cellPosition = new Vector3Int(x, y, 0);
+        TileBase tile = footstepsTilemap.GetTile(cellPosition);
+        groundTilemap.SetTile(cellPosition, null);
     }
 }
