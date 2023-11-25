@@ -161,7 +161,7 @@ public class StatsManager : MonoBehaviour
     {
         Debug.Log("Error accure due: " + newValue);
         TimeRunning = false;
-        LoserScreen.SetActive(true);
+        if (Battery > 0f) LoserScreen.SetActive(true);
     }
 
     public void ResetGame()

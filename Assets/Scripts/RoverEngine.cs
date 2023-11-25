@@ -12,6 +12,8 @@ public class RoverEngine : MonoBehaviour
 
     public StatsManager stats;
 
+    private bool endGame = false;
+
     void Start()
     {
         Move();
@@ -53,12 +55,13 @@ public class RoverEngine : MonoBehaviour
         {
             //Debug.Log("ROVER SAW US!!");
             stats.Error = "ROVER SAW US!!";
-            moveSpeed = 0f;
+            endGame = true;
         }
     }
 
     private void Move()
     {
+        if (endGame) { return; }
         moving = true;
         float angleInRadians = Mathf.Deg2Rad * transform.eulerAngles.z;
         float y = Mathf.Cos(angleInRadians);
@@ -71,6 +74,7 @@ public class RoverEngine : MonoBehaviour
 
     private void Rotate()
     {
+        if (endGame) { return; }
         moving = false;
         Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0, angleOfMovement) - angleOfMovement / 2);
         transform.DORotate(randomRotation.eulerAngles, rotateTime)
