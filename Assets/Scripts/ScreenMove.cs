@@ -10,13 +10,14 @@ public class ScreenMove : MonoBehaviour
     private PlayerInput _playerActions;
     private Rigidbody2D _rigidbody;
     private Vector2 _moveInput;
+    private Animator _animator;
 
     public Transform Rover;
-
 
     private void Awake()
     {
         _playerActions = new PlayerInput();
+        _animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         if (_rigidbody is null)
             Debug.Log("RigidBody is null!");
@@ -32,6 +33,16 @@ public class ScreenMove : MonoBehaviour
         _moveInput = _playerActions.Screen.Move.ReadValue<Vector2>();
         //_moveInput.y = 0f;
         _rigidbody.velocity = _moveInput * _speed;
+
+        if (_moveInput != Vector2.zero)
+        {
+            _animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            _animator.SetBool("isMoving", false);
+        }
+
         //transform.LookAt(Rover);
 
 
