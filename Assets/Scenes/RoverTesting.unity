@@ -50015,61 +50015,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long light
       objectReference: {fileID: 0}
-    - target: {fileID: 1518553136037183661, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811713229347423502, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: moveTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811713229347423502, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811713229347423502, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: rotateTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811713229347423502, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: angleOfMovement
-      value: 135
-      objectReference: {fileID: 0}
     - target: {fileID: 4066850752017236647, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
       propertyPath: m_Name
       value: Short light
       objectReference: {fileID: 0}
-    - target: {fileID: 4066850752017236647, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983241505567944607, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_ShadowIntensityEnabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4983241505567944607, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983241505567944607, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 53317565
-      objectReference: {fileID: 0}
-    - target: {fileID: 6151570750426309815, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6151570750426309815, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_ShadowIntensityEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6151570750426309815, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6151570750426309815, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 53317565
       objectReference: {fileID: 0}
     - target: {fileID: 7628174718162188971, guid: 8e7a2abc8debcb745b7716c04d30a101, type: 3}
       propertyPath: m_Name

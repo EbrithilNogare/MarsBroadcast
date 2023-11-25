@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3880125545775120880}
   - component: {fileID: 4983241505567944607}
   m_Layer: 0
-  m_Name: Light 2D (1)
+  m_Name: Long light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: bd8f2d0300000000
+  m_ApplyToSortingLayers: bd8f2d03
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3620124484935981621}
   - component: {fileID: 6151570750426309815}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Short light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: bd8f2d0300000000
+  m_ApplyToSortingLayers: bd8f2d03
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -321,3 +321,4 @@ MonoBehaviour:
   moveSpeed: 10
   rotateTime: 1
   angleOfMovement: 135
+  moving: 0
