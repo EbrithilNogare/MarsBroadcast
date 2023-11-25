@@ -13,6 +13,9 @@ public class OxyConroller : MonoBehaviour
     [SerializeField]
     private float MaxAcceptedValue;
 
+    private float minimumAngle = 120;
+    private float maximumAngle = -30;
+
     // Start is called before the first frame update
     void Start()
     {
