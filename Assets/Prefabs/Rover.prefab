@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveTime: 10
   moveSpeed: 2
-  rotateTime: 5
+  rotateTime: 6
   angleOfMovement: 135
   moving: 0
   stats: {fileID: 0}
