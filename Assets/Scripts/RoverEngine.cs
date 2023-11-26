@@ -33,14 +33,14 @@ public class RoverEngine : MonoBehaviour
         float y = Mathf.Cos(angleInRadians);
         float x = -Mathf.Sin(angleInRadians);
 
-        RaycastHit2D hit1 = Physics2D.Raycast(transform.position, new Vector3(x, y, 0), 20f, 1 << 8);
+        RaycastHit2D hit1 = Physics2D.Raycast(transform.position, new Vector3(x, y, 0), 20f, (1 << 8) + (1 << 9));
         Debug.DrawLine(transform.position, new Vector3(hit1.point.x, hit1.point.y, 0), Color.green);
 
         angleInRadians = Mathf.Deg2Rad * (transform.eulerAngles.z - 5);
         y = Mathf.Cos(angleInRadians);
         x = -Mathf.Sin(angleInRadians);
 
-        RaycastHit2D hit2 = Physics2D.Raycast(transform.position, new Vector3(x, y, 0), 20f, 1 << 8);
+        RaycastHit2D hit2 = Physics2D.Raycast(transform.position, new Vector3(x, y, 0), 20f, (1 << 8) + (1 << 9));
         Debug.DrawLine(transform.position, new Vector3(hit2.point.x, hit2.point.y, 0), Color.green);
         //Debug.DrawLine(transform.position, new Vector3(x, y, 0) * 1000f, Color.green);
 
