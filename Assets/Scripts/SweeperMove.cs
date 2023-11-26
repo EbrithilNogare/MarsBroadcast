@@ -44,7 +44,7 @@ public class SweeperMove : MonoBehaviour
 
         float cameraSize = camera.orthographicSize;
         Vector3 worldMousePosition = camera.ScreenToWorldPoint(new Vector3(position.x, position.y, cameraSize));
-        Vector2Int coordinate = new Vector2Int((int)Mathf.Round(worldMousePosition.x), (int)Mathf.Round(worldMousePosition.y));
+        Vector2Int coordinate = new Vector2Int((int)Mathf.Floor(worldMousePosition.x), (int)Mathf.Floor(worldMousePosition.y));
 
         _animator.SetBool("IsMoving", true);
 
