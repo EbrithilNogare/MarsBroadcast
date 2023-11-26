@@ -26,7 +26,7 @@ public class OxyConroller : MonoBehaviour
 
     void Update()
     {
-        statsManager.Oxygen = Mathf.Clamp01(statsManager.Oxygen + 0.15f * Time.deltaTime);
+        statsManager.Oxygen = Mathf.Clamp01(statsManager.Oxygen + 0.05f * Time.deltaTime);
     }
 
     public void AddToOxygen(float value)

@@ -20,7 +20,7 @@ public class TempController : MonoBehaviour
 
     void Update()
     {
-        statsManager.Temperature = Mathf.Clamp01(statsManager.Temperature + 0.2f * Time.deltaTime); ;
+        statsManager.Temperature = Mathf.Clamp01(statsManager.Temperature + 0.03f * Time.deltaTime); ;
     }
 
     public void AddToTemp(float value)
