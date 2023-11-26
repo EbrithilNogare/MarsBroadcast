@@ -50,11 +50,11 @@ MonoBehaviour:
   LoserScreen: {fileID: 0}
   _Temperature: 0
   MinTemperature: 0
-  MaxTemperature: 0.7
+  MaxTemperature: 0.99
   TempController: {fileID: 0}
   _Oxygen: 0
   MinOxygen: 0
-  MaxOxygen: 0.83
+  MaxOxygen: 0.99
   OxyConroller: {fileID: 0}
   _Battery: 1
   DecreaseValue: 0.006666667
