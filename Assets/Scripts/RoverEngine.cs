@@ -49,6 +49,7 @@ public class RoverEngine : MonoBehaviour
             hit1.collider.transform.gameObject.tag == "Screen" &&
             hit2.collider.transform.gameObject.tag == "Screen")
         {
+            if (stats.Battery <= 0f) endGame = true;
             //Debug.Log("Ray hit: " + hit1.collider.name + hit2.collider.name);
         }
         else
