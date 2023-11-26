@@ -15,8 +15,10 @@ public class SweeperMove : MonoBehaviour
     private Animator _animator;
     [SerializeField] private SurfaceController tileMapController;
 
+
     //public Transform Sweeper;
     public Camera camera;
+    public StatsManager statsManager;
 
 
     // Start is called before the first frame update
@@ -69,6 +71,7 @@ public class SweeperMove : MonoBehaviour
     {
         if (tileMapController.IsThisTileFootStep(x, y))
         {
+            if (!statsManager.TimeRunning) return;
             _animator.SetBool("IsSweeping", true);
             AudioConnector.Instance.PlaySweepSound();
 

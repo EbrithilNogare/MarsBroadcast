@@ -86,7 +86,7 @@ public class RoverEngine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        stats.Error = "ROVER SAW US!!";
+        stats.Error = "The rover saw us!";
         endGame = true;
     }
 }
