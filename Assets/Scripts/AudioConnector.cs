@@ -93,6 +93,11 @@ public class AudioConnector : MonoBehaviour
         sweepSound.Play();
     }
 
+    public void StopSweepSound()
+    {
+        sweepSound.Stop();
+    }
+
     public void StopAllSounds()
     {
         allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];

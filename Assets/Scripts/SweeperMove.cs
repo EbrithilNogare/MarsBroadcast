@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -64,8 +65,17 @@ public class SweeperMove : MonoBehaviour
             AudioConnector.Instance.PlaySweepSound();
 
             // wait cca 3 sec
-            tileMapController.CleanTile(x, y);
+            StartCoroutine(SweepCouritine(x, y));
+            //tileMapController.CleanTile(x, y);
             //_animator.SetBool("IsSweeping", false);
         }
+    }
+
+    IEnumerator SweepCouritine(int x, int y)
+    {
+        yield return new WaitForSeconds(3);
+        tileMapController.CleanTile(x, y);
+        _animator.SetBool("IsSweeping", false);
+        AudioConnector.Instance.StopSweepSound();
     }
 }
