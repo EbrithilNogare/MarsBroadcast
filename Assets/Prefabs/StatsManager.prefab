@@ -57,5 +57,5 @@ MonoBehaviour:
   MaxOxygen: 0.83
   OxyConroller: {fileID: 0}
   _Battery: 1
-  DecreaseValue: 0.008333334
+  DecreaseValue: 0.006666667
   BatteryController: {fileID: 0}

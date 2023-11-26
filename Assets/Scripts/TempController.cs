@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +11,6 @@ public class TempController : MonoBehaviour
     private float MinAcceptedValue;
     private float MaxAcceptedValue;
 
-    private float probability = 0.01f;
-
-    // Start is called before the first frame update
     void Start()
     {
         slider.value = statsManager.Temperature;
@@ -22,13 +18,9 @@ public class TempController : MonoBehaviour
         MaxAcceptedValue = statsManager.MaxTemperature;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Random.value < probability)
-        {
-            statsManager.Temperature = Mathf.Clamp01(statsManager.Temperature + 0.01f); ;
-        }
+        statsManager.Temperature = Mathf.Clamp01(statsManager.Temperature + 0.03f * Time.deltaTime); ;
     }
 
     public void AddToTemp(float value)
@@ -37,7 +29,6 @@ public class TempController : MonoBehaviour
 
         AudioConnector.Instance.PlayIceSound();
         StartCoroutine(SoundCouritine());
-        //slider.value = statsManager.Temperature;
     }
 
     public void SetValueOnSlider(float value)
@@ -47,13 +38,7 @@ public class TempController : MonoBehaviour
 
     IEnumerator SoundCouritine()
     {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(3);
         Button.interactable = true;
-        //After we have waited 5 seconds print the time again.
-
     }
 }
