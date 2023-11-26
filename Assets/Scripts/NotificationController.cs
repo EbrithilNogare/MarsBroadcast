@@ -13,17 +13,17 @@ public class NotificationController : MonoBehaviour
         closeSensors.SetActive(false);
     }
 
-    void SetTemperature(bool visible)
+    public void SetTemperature(bool visible)
     {
         temperature.SetActive(visible);
     }
 
-    void SetO2(bool visible)
+    public void SetO2(bool visible)
     {
         o2.SetActive(visible);
     }
 
-    void SetCloseSensors(bool visible)
+    public void SetCloseSensors(bool visible)
     {
         closeSensors.SetActive(visible);
     }

@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class StatsManager : MonoBehaviour
 {
+    [SerializeField] NotificationController notificationController;
+
     public delegate void TempChangeDelegate(float newObject);
     public event TempChangeDelegate OnTempChange;
 
@@ -58,6 +60,7 @@ public class StatsManager : MonoBehaviour
         }
     }
     public float MinTemperature;
+    public float WarningTemperature;
     public float MaxTemperature;
     public TempController TempController;
     [Space(10)]
@@ -82,6 +85,7 @@ public class StatsManager : MonoBehaviour
     }
 
     public float MinOxygen;
+    public float WarningOxygen;
     public float MaxOxygen;
     public OxyConroller OxyConroller;
     [Space(10)]
@@ -132,6 +136,7 @@ public class StatsManager : MonoBehaviour
     private void HandleTempChange(float newValue)
     {
         TempController.SetValueOnSlider(newValue);
+        notificationController.SetTemperature(Temperature > WarningTemperature);
         if (Temperature > MaxTemperature || Temperature < MinTemperature)
         {
             Error = "Temperature outside of bounds!";
@@ -141,6 +146,7 @@ public class StatsManager : MonoBehaviour
     private void HandleOxyChange(float newValue)
     {
         OxyConroller.SetValueOnSlider(newValue);
+        notificationController.SetO2(Oxygen > WarningOxygen);
         if (Oxygen > MaxOxygen || Oxygen < MinOxygen)
         {
             Error = "Oxygen outside of bounds!";

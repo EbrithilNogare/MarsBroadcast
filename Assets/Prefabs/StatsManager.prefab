@@ -44,16 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf616d6c10ac9d541882d903638fe7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notificationController: {fileID: 0}
   TimeRunning: 1
   _Error: 
   WinScreen: {fileID: 0}
   LoserScreen: {fileID: 0}
+  ErrorBox: {fileID: 0}
   _Temperature: 0
   MinTemperature: 0
+  WarningTemperature: 0.7
   MaxTemperature: 0.99
   TempController: {fileID: 0}
   _Oxygen: 0
   MinOxygen: 0
+  WarningOxygen: 0.7
   MaxOxygen: 0.99
   OxyConroller: {fileID: 0}
   _Battery: 1

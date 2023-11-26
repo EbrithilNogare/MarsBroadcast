@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 5079976258187427714}
   - component: {fileID: 8649597287616309878}
   - component: {fileID: 7625384726422649942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FootSteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,8 +1297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b5f916586483f48b1f69ea9e8295b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilesBetweenFootStep: 9
-  firstFootStepOffset: 9
+  tilesBetweenFootStep: 4
+  firstFootStepOffset: 8
   groundTilemap: {fileID: 6642106682637661151}
   adormentTilemap: {fileID: 3573098135303692817}
   footstepsTilemap: {fileID: 5079976258187427714}
