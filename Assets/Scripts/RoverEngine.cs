@@ -55,7 +55,7 @@ public class RoverEngine : MonoBehaviour
         else
         {
             //Debug.Log("ROVER SAW US!!");
-            stats.Error = "ROVER SAW US!!";
+            stats.Error = "The rover saw us!";
             endGame = true;
         }
     }

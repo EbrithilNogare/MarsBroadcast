@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -36,6 +37,7 @@ public class StatsManager : MonoBehaviour
     }
     public GameObject WinScreen;
     public GameObject LoserScreen;
+    public TMP_Text ErrorBox;
 
     [Header("TEMPERATURE")]
     public float _Temperature;
@@ -165,6 +167,7 @@ public class StatsManager : MonoBehaviour
         {
             TimeRunning = false;
             LoserScreen.SetActive(true);
+            ErrorBox.text = Error;
             AudioConnector.Instance.StopAllSounds();
             AudioConnector.Instance.PlayEndSound();
         }
