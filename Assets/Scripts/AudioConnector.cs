@@ -7,9 +7,16 @@ public class AudioConnector : MonoBehaviour
     public AudioSource gasSound;
     public AudioSource iceSound;
     public AudioSource moveSound;
+    public AudioSource rotateSound;
     public AudioSource sweepSound;
 
     private static AudioConnector _instance;
+
+    private AudioSource[] allAudioSources;
+
+    private void Start()
+    {
+    }
 
     public static AudioConnector Instance
     {
@@ -65,12 +72,20 @@ public class AudioConnector : MonoBehaviour
         iceSound.Play();
     }
 
-    public void PlayMoveSound(bool active)
+    public void PlayMoveSound()
     {
-        if (active)
-            moveSound.Play();
-        else
-            moveSound.Stop();
+        //if (active)
+        moveSound.Play();
+        //else
+        //moveSound.Stop();
+    }
+
+    public void PlayRotateSound()
+    {
+        //if (active)
+        rotateSound.Play();
+        //else
+        //moveSound.Stop();
     }
 
     public void PlaySweepSound(bool active)
@@ -79,5 +94,14 @@ public class AudioConnector : MonoBehaviour
             sweepSound.Play();
         else
             sweepSound.Stop();
+    }
+
+    public void StopAllSounds()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
     }
 }
