@@ -40,6 +40,8 @@ public class SweeperMove : MonoBehaviour
     {
         if (!context.started) return;
 
+        if (_animator.GetBool("IsSweeping")) return;
+
         if (EventSystem.current.IsPointerOverGameObject(0) || EventSystem.current.IsPointerOverGameObject(-1)) return;
         Vector2 position = Mouse.current.position.ReadValue();
 
