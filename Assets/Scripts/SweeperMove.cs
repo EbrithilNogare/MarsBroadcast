@@ -51,6 +51,12 @@ public class SweeperMove : MonoBehaviour
 
         _animator.SetBool("IsMoving", true);
 
+        float x = transform.position.x - coordinate.x;
+        float y = transform.position.y - coordinate.y;
+        float angleInRadians = Mathf.Atan2(y, x);
+        float angleInDegrees = angleInRadians * (180f / Mathf.PI);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angleInDegrees + 180));
+
         tween.Kill(false);
         tween = transform.DOMove(new Vector3(coordinate.x, coordinate.y, transform.position.z), speed).SetSpeedBased().OnComplete(() =>
         {
@@ -68,8 +74,6 @@ public class SweeperMove : MonoBehaviour
 
             // wait cca 3 sec
             StartCoroutine(SweepCouritine(x, y));
-            //tileMapController.CleanTile(x, y);
-            //_animator.SetBool("IsSweeping", false);
         }
     }
 

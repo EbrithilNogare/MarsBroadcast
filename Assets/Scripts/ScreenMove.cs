@@ -28,7 +28,6 @@ public class ScreenMove : MonoBehaviour
     private void FixedUpdate()
     {
         _moveInput = _playerActions.Screen.Move.ReadValue<Vector2>();
-        //_moveInput.y = 0f;
         _rigidbody.velocity = _moveInput * _speed;
 
         if (_moveInput != Vector2.zero)
@@ -40,26 +39,13 @@ public class ScreenMove : MonoBehaviour
             _animator.SetBool("isMoving", false);
         }
 
-        //transform.LookAt(Rover);
-
-
-        // Given x and y coordinates
         float x = transform.position.x - Rover.transform.position.x;
         float y = transform.position.y - Rover.transform.position.y;
 
-        // Calculate the angle in radians
         float angleInRadians = Mathf.Atan2(x, -y);
-
-        // Convert radians to degrees
         float angleInDegrees = angleInRadians * (180 / Mathf.PI);
 
         transform.rotation = Quaternion.Euler(0, 0, angleInDegrees);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnEnable()
