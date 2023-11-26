@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesBetweenFootStep: 7
-  firstFootStepOffset: 7
+  firstFootStepOffset: 8
   groundTilemap: {fileID: 6642106682637661151}
   adormentTilemap: {fileID: 3573098135303692817}
   footstepsTilemap: {fileID: 5079976258187427714}
