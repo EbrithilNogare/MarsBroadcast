@@ -34,6 +34,7 @@ public class TempController : MonoBehaviour
     public void AddToTemp(float value)
     {
         statsManager.Temperature = Mathf.Clamp01(statsManager.Temperature + value);
+
         AudioConnector.Instance.PlayIceSound();
         StartCoroutine(SoundCouritine());
         //slider.value = statsManager.Temperature;

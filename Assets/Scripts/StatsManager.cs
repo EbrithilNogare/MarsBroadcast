@@ -105,6 +105,8 @@ public class StatsManager : MonoBehaviour
         }
     }
 
+    private AudioSource[] allAudioSources;
+
 
     // Start is called before the first frame update
     void Start()
@@ -148,20 +150,34 @@ public class StatsManager : MonoBehaviour
         BatteryController.SetValueOnSlider(newValue);
         if (Battery <= 0f)
         {
+            TimeRunning = false;
             Debug.Log("You WON!!");
             WinScreen.SetActive(true);
+            AudioConnector.Instance.StopAllSounds();
+            AudioConnector.Instance.PlayEndSound();
         }
     }
 
     private void HandleErrorChange(string newValue)
     {
         Debug.Log("Error accure due: " + newValue);
-        TimeRunning = false;
-        if (Battery > 0f) LoserScreen.SetActive(true);
+        if (Battery > 0f && TimeRunning)
+        {
+            TimeRunning = false;
+            LoserScreen.SetActive(true);
+            AudioConnector.Instance.StopAllSounds();
+            AudioConnector.Instance.PlayEndSound();
+        }
     }
 
     public void ResetGame()
     {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
+
         SceneManager.LoadScene("MainGame");
     }
 
