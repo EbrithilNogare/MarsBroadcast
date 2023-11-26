@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7902118250749415630}
   - component: {fileID: 5531010517422718709}
   - component: {fileID: 8201264516293561076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   - {x: -1.195365, y: -0.2999773, z: 0}
   m_ShapePathHash: 1949114627
   m_Mesh: {fileID: 0}
-  m_InstanceId: -239714
+  m_InstanceId: -522656
   m_LocalBounds:
     m_Center: {x: 0.029985666, y: -0.04294896, z: 0}
     m_Extent: {x: 2.2639554, y: 0.37399888, z: 0}
@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2440605970120269206}
   - component: {fileID: 2573487334180283437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Screen
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1153912448159538076}
   - component: {fileID: 917429201408862988}
   - component: {fileID: 2887272096899269062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mimozemstan
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -54,8 +54,8 @@ MonoBehaviour:
   TempController: {fileID: 0}
   _Oxygen: 0
   MinOxygen: 0
-  MaxOxygen: 0.5
+  MaxOxygen: 0.83
   OxyConroller: {fileID: 0}
   _Battery: 1
-  DecreaseValue: 0
+  DecreaseValue: 0.008333334
   BatteryController: {fileID: 0}

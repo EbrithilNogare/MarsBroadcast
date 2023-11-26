@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class StatsManager : MonoBehaviour
 {
@@ -123,10 +120,9 @@ public class StatsManager : MonoBehaviour
     {
         if (TimeRunning)
         {
-            Battery -= 0.0001f;
+            Battery -= DecreaseValue * Time.deltaTime;
 
         }
-        //Battery -= 0.001f;
     }
 
     private void HandleTempChange(float newValue)

@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveTime: 10
-  moveSpeed: 1
+  moveSpeed: 2
   rotateTime: 5
   angleOfMovement: 135
   moving: 0

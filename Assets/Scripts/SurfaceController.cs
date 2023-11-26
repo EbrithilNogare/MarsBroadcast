@@ -41,7 +41,7 @@ public class SurfaceController : MonoBehaviour
                 {
                     groundTilemap.SetTile(cellPosition, groundTile);
 
-                    if (y > firstFootStepOffset - 2 && (y + firstFootStepOffset + (Mathf.Abs(x) % 2)) % tilesBetweenFootStep == 0)
+                    if (y > firstFootStepOffset - 2 && (y + firstFootStepOffset + (Mathf.Abs(x / 2f) % 2)) % tilesBetweenFootStep == 0)
                     {
                         footstepsTilemap.SetTile(cellPosition, footStepTile);
                     }
