@@ -66,7 +66,7 @@ public class RoverEngine : MonoBehaviour
         float angleInRadians = Mathf.Deg2Rad * transform.eulerAngles.z;
         float y = Mathf.Cos(angleInRadians);
         float x = -Mathf.Sin(angleInRadians);
-
+        AudioConnector.Instance.PlayMoveSound();
         Vector3 targetPosition = transform.position + new Vector3(x, y, 0) * moveSpeed;
         transform.DOMove(targetPosition, moveTime)
             .OnComplete(Rotate);
@@ -77,6 +77,7 @@ public class RoverEngine : MonoBehaviour
         if (endGame) { return; }
         moving = false;
         Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0, angleOfMovement) - angleOfMovement / 2);
+        AudioConnector.Instance.PlayRotateSound();
         transform.DORotate(randomRotation.eulerAngles, rotateTime)
             .SetEase(Ease.InOutQuad)
             .OnComplete(Move);
