@@ -1,10 +1,7 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using static UnityEngine.InputSystem.InputAction;
 
 public class SweeperMove : MonoBehaviour
@@ -51,7 +48,7 @@ public class SweeperMove : MonoBehaviour
 
         _animator.SetBool("IsMoving", true);
 
-        tween.Pause();
+        tween.Kill(false);
         tween = transform.DOMove(new Vector3(coordinate.x, coordinate.y, transform.position.z), speed).SetSpeedBased().OnComplete(() =>
         {
             _animator.SetBool("IsMoving", false);

@@ -42,9 +42,12 @@ public class OxyConroller : MonoBehaviour
         Button.interactable = true;
     }
 
+    DG.Tweening.Core.TweenerCore<Quaternion, Vector3, DG.Tweening.Plugins.Options.QuaternionOptions> rotatorTween;
+
     public void SetValueOnSlider(float value)
     {
         float z = Mathf.LerpAngle(minimumAngle, maximumAngle, value);
-        Rotator.DORotate(new Vector3(0, 0, z), 3f);
+        if (rotatorTween != null) rotatorTween.Kill(false);
+        rotatorTween = Rotator.DORotate(new Vector3(0, 0, z), 3f);
     }
 }
