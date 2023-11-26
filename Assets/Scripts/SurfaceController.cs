@@ -65,9 +65,7 @@ public class SurfaceController : MonoBehaviour
     public void CleanTile(int x, int y)
     {
         if (!IsThisTileFootStep(x, y)) return;
-
         Vector3Int cellPosition = new Vector3Int(x, y, 0);
-        TileBase tile = footstepsTilemap.GetTile(cellPosition);
-        groundTilemap.SetTile(cellPosition, null);
+        footstepsTilemap.SetTile(cellPosition, null);
     }
 }

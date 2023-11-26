@@ -88,12 +88,9 @@ public class AudioConnector : MonoBehaviour
         //moveSound.Stop();
     }
 
-    public void PlaySweepSound(bool active)
+    public void PlaySweepSound()
     {
-        if (active)
-            sweepSound.Play();
-        else
-            sweepSound.Stop();
+        sweepSound.Play();
     }
 
     public void StopAllSounds()
