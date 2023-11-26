@@ -12,6 +12,9 @@ Game jam 2023 MFF
 ## Online DEMO
 [Mars Broadcast](https://ebrithilnogare.github.io/MarsBroadcast/)
 
+## Itch.io
+[itch.io/mars broadcast](https://ebrithilnogare.itch.io/mars-broadcast)
+
 ![image](https://github.com/EbrithilNogare/MarsBroadcast/assets/22661032/a24efac8-698d-48a0-b208-c6059d53e062)
 
 ### Unity version
